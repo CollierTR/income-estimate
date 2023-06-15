@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0fc68b5e67.js" crossorigin="anonymous"></script>
+    <title>Bonnie Pay</title>
+</head>
+    <body>
+
+        <div class="calc">
+
+            <div class="overlay" id='overlay'>
+                <div class="overlay-top-half">
+                    <span>
+                        <p>Estimated Income</p>
+                        <p id="result">test</p>
+                    </span>
+                    <div id="close" onclick="generatePay()">close</div>
+                </div>
+
+                <div class="overlay-bottom-half">
+
+                          <p class="left">Base Salary:</p>
+                          <p class='right' id="salary-display"></p>
+                        
+                          <p class="left">Below Target Incentive:</p>
+                          <p class='right' id="below-target"></p>
+                        
+                            <p class="left">Above Target Incentive:</p>
+                            <p class='right' id="above-target"></p>
+                        
+                            <p class="left">Safety Bonus:</p>
+
+                            <p class='right' id="safety-display"></p>
+                        
+                </div>
+            </div>
+
+            <img src="img/Logo-Bonnieplants-2021-180px.webp" alt="Bonnie Plants' logo">
+            <br>
+
+            <span>
+            <label for="target-El">Sales Target</label>
+            <input type="number" id="target-El" name="target-El" placeholder="" required>
+            </span>
+
+            <span>
+            <label for="std">Sales to Date</label>
+            <input type="number" id="std" name="std" placeholder="" value="" required>
+            </span>
+
+            <span>
+            <label for="deductions">Helper and Other Deductions</label>
+            <input type="number" id="deductions" name="deductions" required>
+            </span>
+
+            <span>
+            <label for="rookie">Is this your first year?</label>
+            <select name="rookie" id="rookie">
+                <option value="NO" id="rookie-input">NO</option>
+                <option value="YES">YES</option>
+            </select>
+            </span>
+
+            <span>
+            <label for="safety">Do you qualify for the safety bonus?</label>
+            <select name="safety" id="safety">
+                <option value="NO">NO</option>
+                <option value="YES">YES</option>
+            </select>
+            </span>
+
+
+            <button onclick="generatePay()">Estimate Income</button>
+        </div>
+        <script src="pay.js"></script>
+    </body>
+</html>
