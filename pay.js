@@ -71,6 +71,7 @@ function generatePay() {
 
     if (totalSalesInput > target) {
         income += aboveTargetIncentive;
+        document.getElementById('above-target').innerText = '$' + aboveTargetIncentive.toFixed(2);
     }
 
     if (safetyInput === 'YES') {
@@ -96,7 +97,6 @@ function generatePay() {
     document.getElementById('result').innerText = '$' + income.toFixed(2);
     document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2);
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
-    document.getElementById('above-target').innerText = '$' + aboveTargetIncentive.toFixed(2);
     document.getElementById('safety-display').innerText = '$' + safety.toFixed(2);
 
 
