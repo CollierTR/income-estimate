@@ -103,9 +103,9 @@ function generatePay() {
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
     */
 
-    document.getElementById('result').innerText = '$' + income.toFixed(2).toLocaleString();
-    document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2).toLocaleString();
-    document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2).toLocaleString();
+    document.getElementById('result').innerText = '$' + income.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 
     income = 0;
