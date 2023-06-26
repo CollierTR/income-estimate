@@ -103,3 +103,6 @@ function generatePay() {
     income = 0;
 }
 
+function reloadPage() {
+    window.location.reload(); 
+}
