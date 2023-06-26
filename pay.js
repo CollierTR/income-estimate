@@ -97,8 +97,8 @@ function generatePay() {
     console.log('Income = ' + income); 
     */
 
-    let incomeDisplay = Math.round(income);
-    document.getElementById('result').innerText = '$' + incomeDisplay.toLocaleString("en-US");
+    let incomeDisplay = income.toLocaleString("en-US");
+    document.getElementById('result').innerText = '$' + Math.round(incomeDisplay);
     document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2);
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
 
