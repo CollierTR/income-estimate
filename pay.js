@@ -97,10 +97,15 @@ function generatePay() {
     console.log('Income = ' + income); 
     */
 
-   
+   /*
     document.getElementById('result').innerText = '$' + income.toFixed(2);
     document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2);
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
+    */
+
+    document.getElementById('result').innerText = '$' + income.toFixed(2).toLocaleString();
+    document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2).toLocaleString();
+    document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2).toLocaleString();
 
 
     income = 0;
