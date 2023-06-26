@@ -76,8 +76,9 @@ function generatePay() {
 
     if (safetyInput === 'YES') {
         income += safety;
+        document.getElementById('safety-display').innerText = '$' + safety.toFixed(2);
     } else {
-        safety = 0;
+        document.getElementById('safety-display').innerText = '$' + "0";
     }
 
     if (rookieInput === "YES") {
@@ -96,10 +97,9 @@ function generatePay() {
     console.log('Income = ' + income); 
     */
 
-    document.getElementById('result').innerText = '$' + income.toFixed(2).toLocaleString("en-US");
+    document.getElementById('result').innerText = '$' + income.toLocaleString("en-US");
     document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2);
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
-    document.getElementById('safety-display').innerText = '$' + safety.toFixed(2);
 
 
     income = 0;
