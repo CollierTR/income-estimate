@@ -71,12 +71,12 @@ function generatePay() {
 
     if (totalSalesInput > target) {
         income += aboveTargetIncentive;
-        document.getElementById('above-target').innerText = '$' + aboveTargetIncentive.toFixed(2);
+        document.getElementById('above-target').innerText = '$' + aboveTargetIncentive.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     if (safetyInput === 'YES') {
         income += safety;
-        document.getElementById('safety-display').innerText = '$' + safety.toFixed(2);
+        document.getElementById('safety-display').innerText = '$' + safety.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     } else {
         document.getElementById('safety-display').innerText = '$' + "0";
     }
