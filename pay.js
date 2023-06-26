@@ -76,6 +76,8 @@ function generatePay() {
 
     if (safetyInput === 'YES') {
         income += safety;
+    } else {
+        safety = 0;
     }
 
     if (rookieInput === "YES") {
@@ -94,7 +96,7 @@ function generatePay() {
     console.log('Income = ' + income); 
     */
 
-    document.getElementById('result').innerText = '$' + income.toFixed(2);
+    document.getElementById('result').innerText = '$' + income.toFixed(2).toLocaleString("en-US");
     document.getElementById('salary-display').innerText = '$' + baseSalary.toFixed(2);
     document.getElementById('below-target').innerText = '$' + belowTargetIncentive.toFixed(2);
     document.getElementById('safety-display').innerText = '$' + safety.toFixed(2);
