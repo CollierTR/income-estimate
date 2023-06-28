@@ -30,6 +30,7 @@ body {
 
 img {
     margin: 0;
+    width: 60%;
 }
 
 input {
@@ -122,5 +123,9 @@ button {
 
     body {
         background-color: rgb(4, 85, 21);
+    }
+
+    img {
+        width: 50%;
     }
 }
